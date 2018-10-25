@@ -1,0 +1,43 @@
+{
+  "name": "express-api-typescript",
+  "version": "1.0.0",
+  "description": "An API built with NodeJS, Express, MongoDB and TypeScript",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' ./src/testServer.ts",
+    "mochatest": "mocha -r ts-node/register src/**/*.spec.ts",
+    "build": "tsc",
+    "dev": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' ./src/server.ts",
+    "start": "nodemon ./dist/server.js",
+    "prod": "npm run build && npm run start",
+    "fmt": "prettier --write \"**/*.{ts,js}\""
+  },
+  "keywords": [
+    "Oliver",
+    "Franke",
+    "Express",
+    "Typescript",
+    "Node",
+    "MongoDb",
+    "Mocha"
+  ],
+  "author": "Oliver Franke <oliver.franke@limebit.de> (https://limebit.de)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.14"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "@types/mocha": "5.2.5",
+    "@types/mongoose": "5.2.19",
+    "@types/supertest": "2.0.6",
+    "mocha": "5.2.0",
+    "nodemon": "1.18.4",
+    "prettier": "1.14.3",
+    "supertest": "3.3.0",
+    "ts-node": "7.0.1",
+    "typescript": "3.1.3"
+  }
+}
